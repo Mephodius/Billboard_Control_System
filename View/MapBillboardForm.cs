@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,8 +22,19 @@ namespace View
         UserControlForm userCtrlForm;
         AdminControlForm adminCtrlForm;
         string slnPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "");
-
-        Pen myPen = new Pen(System.Drawing.Color.Red, 5);
+        Pen myPen = new Pen(System.Drawing.Color.Black, 4);
+        Brush brush = new SolidBrush(Color.Red);
+        //классная, но бесполезная штука
+        Brush gradientBrush = new LinearGradientBrush(new Point(0, 0), new Point(1000, 1000), Color.Purple, Color.Blue);
+        int bbRadius=10;
+        int extendedRadius=15;
+        int frequency=0; //Canvas retfresh counter for MouseMove
+        private ArrayList billboardsList = new ArrayList();
+        private ArrayList billboardsToDelete = new ArrayList();
+        private Rectangle selectionRect = new Rectangle();
+        private Point rectStartPoint;
+        private Point rectEndPoint;
+        private bool rectStartFlag = false;
         public MapBillboardForm(StartForm previousForm, bool userFlg)
         {
             InitializeComponent();
@@ -45,8 +58,7 @@ namespace View
         private void UserBillboard_Paint(object sender, PaintEventArgs e)
         {
             g = this.CreateGraphics();
-            img = Image.FromFile(slnPath+ "\\Resources\\Minsk.png");
-            g.DrawImage(img, 0, 0, this.Width, this.Height);
+            RepaintMap();
         }
 
         private void UserBillboard_Load(object sender, EventArgs e)
@@ -96,5 +108,126 @@ namespace View
             return this.showOptionsButton;
         }
 
+        private void MapBillboardForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (userFlag) {
+                if (adminCtrlForm.AddBillboardFlag)
+                {
+                    /*
+                    frequency++;
+                    Rectangle rect = new Rectangle(PointToClient(Cursor.Position).X - bbPointRadius, PointToClient(Cursor.Position).Y - bbPointRadius, bbPointRadius*2, bbPointRadius * 2);
+                    g.FillEllipse(brush, rect);
+                    if ((frequency%3)==0) {
+                        RepaintMap();
+                    }
+                    */
+                }
+            }
+            if (!userFlag||!adminCtrlForm.AddBillboardFlag)
+            {
+                if (rectStartFlag && e.Button == MouseButtons.Left) {
+                    rectEndPoint = e.Location;
+                    selectionRect.Location = new Point(
+                        Math.Min(rectStartPoint.X, rectEndPoint.X),
+                        Math.Min(rectStartPoint.Y, rectEndPoint.Y));
+                    selectionRect.Size = new Size(
+                        Math.Abs(rectStartPoint.X - rectEndPoint.X),
+                        Math.Abs(rectStartPoint.Y - rectEndPoint.Y));
+                    g.DrawRectangle(myPen, selectionRect);
+                    frequency++;
+                    if ((frequency % 5) == 0)
+                    {
+                        this.Invalidate();
+                    }
+                }
+            }
+        }
+
+        private void MapBillboardForm_MouseHover(object sender, EventArgs e)
+        {
+            if (userFlag)
+            {
+                if (adminCtrlForm.AddBillboardFlag)
+                {
+                    /*
+                    Rectangle rect = new Rectangle(PointToClient(Cursor.Position).X-bbPointRadius, PointToClient(Cursor.Position).Y - bbPointRadius, bbPointRadius * 2, bbPointRadius * 2);
+                    g.FillEllipse(brush, rect);
+                    */
+                }
+            }
+        }
+
+        private void MapBillboardForm_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (userFlag)
+            {
+                if (adminCtrlForm.AddBillboardFlag)
+                {
+                    int bbX = PointToClient(Cursor.Position).X - bbRadius;
+                    int bbY = PointToClient(Cursor.Position).Y - bbRadius;
+                    Rectangle rect = new Rectangle(bbX, bbY, bbRadius * 2, bbRadius * 2);
+                    g.FillEllipse(brush, rect);
+                    adminCtrlForm.AddBillboardFlag = false;
+                    adminCtrlForm.getAddBillBoardButton().Enabled = true;
+                    billboardsList.Add(new Billboard(new Point(bbX, bbY)));
+                    Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        public void RepaintMap()
+        {
+            img = Image.FromFile(slnPath + "\\Resources\\Minsk.png");
+            g.DrawImage(img, 0, 0, this.Width, this.Height);
+            foreach(Billboard billboard in billboardsList)
+            {
+                Rectangle rect = new Rectangle(billboard.Coordinates.X, billboard.Coordinates.Y, bbRadius * 2, bbRadius * 2);
+                g.FillEllipse(brush, rect);
+            }
+        }
+
+        private void MapBillboardForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left&&(!userFlag||!adminCtrlForm.AddBillboardFlag))
+            {
+                rectStartPoint = e.Location;
+                rectStartFlag = true;
+                billboardsToDelete = new ArrayList();
+            }
+        }
+
+        private void MapBillboardForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && rectStartFlag==true && userFlag)
+            {
+                bool emptyFlag = true;
+                int counter = 0;
+                rectStartFlag = false;
+                foreach (Billboard billboard in billboardsList)
+                {
+                    if ((billboard.Coordinates.X>rectStartPoint.X) && (billboard.Coordinates.X < rectEndPoint.X)) {
+                        if ((billboard.Coordinates.Y > rectStartPoint.Y) && (billboard.Coordinates.Y < rectEndPoint.Y)) {
+                            emptyFlag = false;
+                            billboardsToDelete.Add(counter);
+                            counter++;
+                            Rectangle rect = new Rectangle(billboard.Coordinates.X + bbRadius - extendedRadius, billboard.Coordinates.Y + bbRadius-extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                            g.FillEllipse(gradientBrush, rect);
+                        }
+                    }
+                }
+                if (!emptyFlag)
+                {
+                    adminCtrlForm.getDeleteBillBoardButton().Enabled = true;
+                }
+            }
+        }
+        public ArrayList getBillboardList()
+        {
+            return this.billboardsList;
+        }
+        public ArrayList getBillBoardsToDelete()
+        {
+            return this.billboardsToDelete;
+        }
     }
 }

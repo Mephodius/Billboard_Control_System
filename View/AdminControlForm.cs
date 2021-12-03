@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,18 @@ namespace View
     {
         MapBillboardForm previousForm;
         UsersInfoView usersInfoView;
+        private bool addBillboardFlag;
+        public bool AddBillboardFlag
+        {
+            get
+            {
+                return addBillboardFlag;
+            }
+            set
+            {
+                addBillboardFlag = value;
+            }
+        }
         public AdminControlForm(MapBillboardForm prevForm)
         {
             InitializeComponent();
@@ -46,12 +59,31 @@ namespace View
 
         private void addBillboardButton_Click(object sender, EventArgs e)
         {
-
+            addBillboardFlag = true;
+            addBillboardButton.Enabled = false;
+            previousForm.Cursor = Cursors.Cross;
         }
 
         private void deleteBillboardButton_Click(object sender, EventArgs e)
         {
+            previousForm.getBillBoardsToDelete().Reverse();
+            ArrayList array = previousForm.getBillBoardsToDelete();
+            //for(int i = array.Count;i>=0;i--)
+            foreach(int index in array)
+            {
+                previousForm.getBillboardList().RemoveAt(index);
+            }
+            previousForm.RepaintMap();
+            deleteBillboardButton.Enabled = false;
+        }
 
+        public Control getAddBillBoardButton()
+        {
+            return this.addBillboardButton;
+        }
+        public Control getDeleteBillBoardButton()
+        {
+            return this.deleteBillboardButton;
         }
     }
 }
