@@ -46,65 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminControlForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminControlForm.Designer.cs">
-      <DependentUpon>AdminControlForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateScheduleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateScheduleForm.Designer.cs">
-      <DependentUpon>CreateScheduleForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ShowInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowInfoForm.Designer.cs">
-      <DependentUpon>ShowInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StartForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MapBillboardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MapBillboardForm.Designer.cs">
-      <DependentUpon>MapBillboardForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserControlForm.Designer.cs">
-      <DependentUpon>UserControlForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AdminControlForm.resx">
-      <DependentUpon>AdminControlForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateScheduleForm.resx">
-      <DependentUpon>CreateScheduleForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShowInfoForm.resx">
-      <DependentUpon>ShowInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,12 +58,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="MapBillboardForm.resx">
-      <DependentUpon>MapBillboardForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlForm.resx">
-      <DependentUpon>UserControlForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +73,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minsk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{e2a64387-7be3-4ef5-b5aa-da15b0182321}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presenter\Presenter.csproj">
+      <Project>{78660add-4327-4066-93bf-29e4b703b831}</Project>
+      <Name>Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\View\View.csproj">
+      <Project>{ac159338-d2b2-4fad-ba7d-70bd853810d6}</Project>
+      <Name>View</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
