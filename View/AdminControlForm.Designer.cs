@@ -1,5 +1,5 @@
 ﻿
-namespace Billboards
+namespace View
 {
     partial class AdminControlForm
     {
@@ -30,10 +30,11 @@ namespace Billboards
         private void InitializeComponent()
         {
             this.exitButton = new System.Windows.Forms.Button();
-            this.addDeleteBillboardButton = new System.Windows.Forms.Button();
-            this.addDeleteUserButton = new System.Windows.Forms.Button();
+            this.addBillboardButton = new System.Windows.Forms.Button();
+            this.showUsersButton = new System.Windows.Forms.Button();
             this.showLogsButton = new System.Windows.Forms.Button();
             this.showStatusBarButton = new System.Windows.Forms.Button();
+            this.deleteBillboardButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exitButton
@@ -49,29 +50,31 @@ namespace Billboards
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // addDeleteBillboardButton
+            // addBillboardButton
             // 
-            this.addDeleteBillboardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addBillboardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addDeleteBillboardButton.Location = new System.Drawing.Point(89, 354);
-            this.addDeleteBillboardButton.Name = "addDeleteBillboardButton";
-            this.addDeleteBillboardButton.Size = new System.Drawing.Size(191, 53);
-            this.addDeleteBillboardButton.TabIndex = 6;
-            this.addDeleteBillboardButton.Text = "Add/Delete Billboard";
-            this.addDeleteBillboardButton.UseVisualStyleBackColor = true;
+            this.addBillboardButton.Location = new System.Drawing.Point(89, 354);
+            this.addBillboardButton.Name = "addBillboardButton";
+            this.addBillboardButton.Size = new System.Drawing.Size(92, 53);
+            this.addBillboardButton.TabIndex = 6;
+            this.addBillboardButton.Text = "Add Billboard";
+            this.addBillboardButton.UseVisualStyleBackColor = true;
+            this.addBillboardButton.Click += new System.EventHandler(this.addBillboardButton_Click);
             // 
-            // addDeleteUserButton
+            // showUsersButton
             // 
-            this.addDeleteUserButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.showUsersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addDeleteUserButton.Location = new System.Drawing.Point(89, 259);
-            this.addDeleteUserButton.Name = "addDeleteUserButton";
-            this.addDeleteUserButton.Size = new System.Drawing.Size(191, 53);
-            this.addDeleteUserButton.TabIndex = 7;
-            this.addDeleteUserButton.Text = "Add/Delete User";
-            this.addDeleteUserButton.UseVisualStyleBackColor = true;
+            this.showUsersButton.Location = new System.Drawing.Point(89, 259);
+            this.showUsersButton.Name = "showUsersButton";
+            this.showUsersButton.Size = new System.Drawing.Size(191, 53);
+            this.showUsersButton.TabIndex = 7;
+            this.showUsersButton.Text = "Show Users";
+            this.showUsersButton.UseVisualStyleBackColor = true;
+            this.showUsersButton.Click += new System.EventHandler(this.showUsersButton_Click);
             // 
             // showLogsButton
             // 
@@ -97,16 +100,32 @@ namespace Billboards
             this.showStatusBarButton.Text = "Show Status Bar";
             this.showStatusBarButton.UseVisualStyleBackColor = true;
             // 
+            // deleteBillboardButton
+            // 
+            this.deleteBillboardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBillboardButton.Enabled = false;
+            this.deleteBillboardButton.Location = new System.Drawing.Point(188, 354);
+            this.deleteBillboardButton.Name = "deleteBillboardButton";
+            this.deleteBillboardButton.Size = new System.Drawing.Size(92, 53);
+            this.deleteBillboardButton.TabIndex = 11;
+            this.deleteBillboardButton.Text = "Delete Billboard";
+            this.deleteBillboardButton.UseVisualStyleBackColor = true;
+            this.deleteBillboardButton.Click += new System.EventHandler(this.deleteBillboardButton_Click);
+            // 
             // AdminControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 753);
+            this.Controls.Add(this.deleteBillboardButton);
             this.Controls.Add(this.showStatusBarButton);
             this.Controls.Add(this.showLogsButton);
-            this.Controls.Add(this.addDeleteUserButton);
-            this.Controls.Add(this.addDeleteBillboardButton);
+            this.Controls.Add(this.showUsersButton);
+            this.Controls.Add(this.addBillboardButton);
             this.Controls.Add(this.exitButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdminControlForm";
             this.Text = "AdminControlForm";
             this.TopMost = true;
@@ -119,9 +138,10 @@ namespace Billboards
         #endregion
 
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button addDeleteBillboardButton;
-        private System.Windows.Forms.Button addDeleteUserButton;
+        private System.Windows.Forms.Button addBillboardButton;
+        private System.Windows.Forms.Button showUsersButton;
         private System.Windows.Forms.Button showLogsButton;
         private System.Windows.Forms.Button showStatusBarButton;
+        private System.Windows.Forms.Button deleteBillboardButton;
     }
 }

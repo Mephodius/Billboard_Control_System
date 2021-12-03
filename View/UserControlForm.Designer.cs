@@ -1,5 +1,5 @@
 ﻿
-namespace Billboards
+namespace View
 {
     partial class UserControlForm
     {
@@ -38,8 +38,8 @@ namespace Billboards
             // 
             // addAdButton
             // 
-            this.addAdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.addAdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addAdButton.Location = new System.Drawing.Point(90, 43);
             this.addAdButton.Name = "addAdButton";
@@ -51,8 +51,8 @@ namespace Billboards
             // 
             // uniteButton
             // 
-            this.uniteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.uniteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uniteButton.Location = new System.Drawing.Point(90, 139);
             this.uniteButton.Name = "uniteButton";
@@ -63,8 +63,8 @@ namespace Billboards
             // 
             // showInfoButton
             // 
-            this.showInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.showInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.showInfoButton.Location = new System.Drawing.Point(90, 246);
             this.showInfoButton.Name = "showInfoButton";
@@ -76,8 +76,8 @@ namespace Billboards
             // 
             // createScheduleButton
             // 
-            this.createScheduleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.createScheduleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.createScheduleButton.Location = new System.Drawing.Point(90, 351);
             this.createScheduleButton.Name = "createScheduleButton";
@@ -89,8 +89,8 @@ namespace Billboards
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.exitButton.Location = new System.Drawing.Point(90, 455);
             this.exitButton.Name = "exitButton";
@@ -110,6 +110,7 @@ namespace Billboards
             this.Controls.Add(this.showInfoButton);
             this.Controls.Add(this.uniteButton);
             this.Controls.Add(this.addAdButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserControlForm";
             this.Text = "UserOptionsForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserControlForm_FormClosing);

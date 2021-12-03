@@ -1,5 +1,5 @@
 ﻿
-namespace Billboards
+namespace View
 {
     partial class MapBillboardForm
     {

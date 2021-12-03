@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Billboards
+namespace View
 {
     public partial class CreateScheduleForm : Form
     {
@@ -26,6 +26,28 @@ namespace Billboards
         {
             e.Cancel = true;
             this.Visible = false;
+        }
+
+        private void CreateScheduleForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = (DataGridViewRow)createScheduleDataGridView.Rows[0].Clone();
+            createScheduleDataGridView.Rows.Add(row);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (createScheduleDataGridView.RowCount > 0)
+                    foreach (DataGridViewRow row in createScheduleDataGridView.SelectedRows)
+                        createScheduleDataGridView.Rows.RemoveAt(row.Index);
+            }
+            catch{}
         }
     }
 }

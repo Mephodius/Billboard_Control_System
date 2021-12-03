@@ -1,5 +1,5 @@
 ﻿
-namespace Billboards
+namespace View
 {
     partial class ShowInfoForm
     {
@@ -115,6 +115,7 @@ namespace Billboards
             this.Text = "ShowInfoForm";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ShowInfoForm_FormClosing);
+            this.Load += new System.EventHandler(this.ShowInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

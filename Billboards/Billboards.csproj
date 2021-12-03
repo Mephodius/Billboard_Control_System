@@ -72,9 +72,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minsk.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{e2a64387-7be3-4ef5-b5aa-da15b0182321}</Project>
       <Name>Model</Name>

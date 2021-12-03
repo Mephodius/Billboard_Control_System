@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Billboards
+namespace View
 {
     public partial class MapBillboardForm : Form
     {
@@ -18,6 +19,7 @@ namespace Billboards
         StartForm prevForm;
         UserControlForm userCtrlForm;
         AdminControlForm adminCtrlForm;
+        string slnPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "");
 
         Pen myPen = new Pen(System.Drawing.Color.Red, 5);
         public MapBillboardForm(StartForm previousForm, bool userFlg)
@@ -43,7 +45,7 @@ namespace Billboards
         private void UserBillboard_Paint(object sender, PaintEventArgs e)
         {
             g = this.CreateGraphics();
-            img = Image.FromFile("C:/Users/alyos/source/repos/Billboards/Billboards/Resources/Minsk.png");
+            img = Image.FromFile(slnPath+ "\\Resources\\Minsk.png");
             g.DrawImage(img, 0, 0, this.Width, this.Height);
         }
 

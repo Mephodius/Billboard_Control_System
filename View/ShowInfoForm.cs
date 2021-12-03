@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Billboards
+namespace View
 {
     public partial class ShowInfoForm : Form
     {
@@ -27,6 +27,11 @@ namespace Billboards
         {
             e.Cancel = true;
             this.Visible = false;
+        }
+
+        private void ShowInfoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
