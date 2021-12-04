@@ -131,7 +131,7 @@ namespace View
                     selectionRect.Size = new Size(
                         Math.Abs(rectStartPoint.X - rectEndPoint.X),
                         Math.Abs(rectStartPoint.Y - rectEndPoint.Y));
-                    g.DrawRectangle(myPen, selectionRect);
+                    g.DrawRectangle(selectionPen, selectionRect);
                     frequency++;
                     if ((frequency % 5) == 0)
                     {
