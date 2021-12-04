@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace View
     public partial class UsersInfoView : Form
     {
         AdminControlForm prevForm;
+        private string userNamesFilePath = System.IO.Path.Combine(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "") + "\\Resources\\usernames.txt";
         public UsersInfoView(AdminControlForm previousForm)
         {
             InitializeComponent();
@@ -21,7 +23,18 @@ namespace View
 
         private void UsersInfoView_Load(object sender, EventArgs e)
         {
-
+            using (StreamReader sr = new StreamReader(userNamesFilePath, System.Text.Encoding.Default))
+            {
+                string[] temp;
+                string line;
+                int counter = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    temp = line.Split(' ');
+                    userDataGridView.Rows.Add();
+                    userDataGridView.Rows[counter].Cells[0].Value = temp[counter];
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,7 +81,14 @@ namespace View
         }
         private void saveUserInfo()
         {
-
+            File.WriteAllText(userNamesFilePath, string.Empty);
+            for(int i = 0; i < userDataGridView.RowCount-1; i++)
+            {
+                using (StreamWriter sw = new StreamWriter(userNamesFilePath, true))
+                {
+                    sw.WriteLine(userDataGridView.Rows[i].Cells[0].Value.ToString() + " ");
+                }
+            }
         }
     }
 }

@@ -191,8 +191,8 @@ namespace View
                     g.FillEllipse(brush, rect);
                     adminCtrlForm.AddBillboardFlag = false;
                     adminCtrlForm.getAddBillBoardButton().Enabled = true;
-                    //Point хранит координаты центра билборда
-                    billboardsList.Add(new Billboard(new Point(bbX+bbRadius, bbY+ bbRadius), adminCtrlForm.SelectedUserName));
+                        //Point хранит координаты центра билборда
+                    billboardsList.Add(new Billboard(new Point(bbX + bbRadius, bbY + bbRadius), adminCtrlForm.SelectedUserName));
 
                     Cursor = Cursors.Default;
                 }

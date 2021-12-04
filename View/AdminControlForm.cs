@@ -72,9 +72,16 @@ namespace View
 
         private void addBillboardButton_Click(object sender, EventArgs e)
         {
-            addBillboardFlag = true;
-            addBillboardButton.Enabled = false;
-            previousForm.Cursor = Cursors.Cross;
+            if (selectedUserName == null)
+            {
+                MessageBox.Show("Please, choose user first!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                addBillboardFlag = true;
+                addBillboardButton.Enabled = false;
+                previousForm.Cursor = Cursors.Cross;
+            }
         }
 
         private void deleteBillboardButton_Click(object sender, EventArgs e)
