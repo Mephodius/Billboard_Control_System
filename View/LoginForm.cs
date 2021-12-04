@@ -13,7 +13,7 @@ namespace View
     public partial class LoginForm : Form
     {
         private StartForm prevForm;
-        private MapBillboardForm userBillboardForm;
+        private MapBillboardForm mapBillboardForm;
         public LoginForm(StartForm previousForm)
         {
             InitializeComponent();
@@ -22,9 +22,15 @@ namespace View
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            userBillboardForm = new MapBillboardForm(prevForm, false);
-            userBillboardForm.Show();
+            mapBillboardForm = new MapBillboardForm(prevForm, false);
+            mapBillboardForm.getUserName(userNameTextBox.Text);
+            mapBillboardForm.Show();
             this.Visible = false;
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -100,6 +100,7 @@ namespace View
             this.showStatusBarButton.TabIndex = 9;
             this.showStatusBarButton.Text = "Show Status Bar";
             this.showStatusBarButton.UseVisualStyleBackColor = true;
+            this.showStatusBarButton.Click += new System.EventHandler(this.showStatusBarButton_Click);
             // 
             // deleteBillboardButton
             // 

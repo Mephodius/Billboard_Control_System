@@ -39,6 +39,10 @@
     <Reference Include="Microsoft.Data.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Analysis.0.19.0\lib\netstandard2.0\Microsoft.Data.Analysis.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ML.DataView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ML.DataView.1.7.0\lib\netstandard2.0\Microsoft.ML.DataView.dll</HintPath>
     </Reference>
@@ -209,6 +213,18 @@
     <Compile Include="AdminControlForm.Designer.cs">
       <DependentUpon>AdminControlForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdvertisementsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvertisementsTable.Designer.cs">
+      <DependentUpon>AdvertisementsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adVideoPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adVideoPlayer.Designer.cs">
+      <DependentUpon>adVideoPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Billboard.cs" />
     <Compile Include="CreateScheduleForm.cs">
       <SubType>Form</SubType>
@@ -256,6 +272,12 @@
     </Compile>
     <EmbeddedResource Include="AdminControlForm.resx">
       <DependentUpon>AdminControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvertisementsTable.resx">
+      <DependentUpon>AdvertisementsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adVideoPlayer.resx">
+      <DependentUpon>adVideoPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateScheduleForm.resx">
       <DependentUpon>CreateScheduleForm.cs</DependentUpon>
@@ -307,6 +329,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minsk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

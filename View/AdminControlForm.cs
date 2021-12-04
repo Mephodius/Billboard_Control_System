@@ -16,7 +16,19 @@ namespace View
         MapBillboardForm previousForm;
         UsersInfoView usersInfoView;
         private bool addBillboardFlag;
-        string selectedUserName;
+        private string selectedUserName;
+        public string SelectedUserName
+        {
+            get
+            {
+                return selectedUserName;
+            }
+            set
+            {
+                selectedUserName = value;
+            }
+        }
+
         public bool AddBillboardFlag
         {
             get
@@ -67,8 +79,8 @@ namespace View
 
         private void deleteBillboardButton_Click(object sender, EventArgs e)
         {
-            previousForm.getBillBoardsToDelete().Reverse();
             ArrayList array = previousForm.getBillBoardsToDelete();
+            array.Reverse();
             //for(int i = array.Count;i>=0;i--)
             foreach(int index in array)
             {
@@ -94,6 +106,12 @@ namespace View
         public void setUserName(string userName)
         {
             selectedUserName = userName;
+            this.Text = userName;
+        }
+
+        private void showStatusBarButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

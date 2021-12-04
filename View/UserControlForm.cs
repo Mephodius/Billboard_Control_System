@@ -16,6 +16,19 @@ namespace View
         private MapBillboardForm prevForm;
         private ShowInfoForm showInfForm;
         private CreateScheduleForm createSchForm;
+        string userName;
+        public string UserName
+        {
+            get
+            {
+                return userName;
+            }
+            set
+            {
+                userName = value;
+                this.Text = userName;
+            }
+        }
         public UserControlForm(MapBillboardForm previousForm)
         {
             InitializeComponent();
@@ -26,6 +39,7 @@ namespace View
             openAd.Filter = "Image files(*.jpg)|*.jpg|All files(*.*)|*.*";
             uniteButton.Enabled = false;
             TopMost = true;
+            this.Text = userName;
         }
 
         private void AddAdButton_Click(object sender, EventArgs e)

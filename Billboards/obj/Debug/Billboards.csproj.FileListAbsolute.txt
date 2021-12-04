@@ -52,3 +52,11 @@ d:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\System.Memory.xml
 d:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\System.Numerics.Vectors.xml
 d:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 d:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\AxInterop.WMPLib.dll
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.Direct3D.dll
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.dll
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Interop.WMPLib.dll
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.Direct3D.xml
+D:\PROJECT_TP\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.xml

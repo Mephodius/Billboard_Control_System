@@ -21,6 +21,8 @@ namespace View
         StartForm prevForm;
         UserControlForm userCtrlForm;
         AdminControlForm adminCtrlForm;
+        AdvertisementsTable adTable;
+        adVideoPlayer adPlayer;
         string slnPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "");
         Pen selectionPen = new Pen(System.Drawing.Color.Black, 4);
         Brush brush = new SolidBrush(Color.Orange);
@@ -35,6 +37,7 @@ namespace View
         private Point rectStartPoint;
         private Point rectEndPoint;
         private bool rectStartFlag = false;
+        private string userName;
         public MapBillboardForm(StartForm previousForm, bool userFlg)
         {
             InitializeComponent();
@@ -63,18 +66,19 @@ namespace View
 
         private void UserBillboard_Load(object sender, EventArgs e)
         {
-
+            loadBillboardsPosition();
         }
 
         private void UserBillboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.userFlag == false)
+            if (!userFlag)
             {
                 userCtrlForm.Close();
             }
             else
             {
                 adminCtrlForm.Close();
+                saveBillboardsPosition();
             }
             prevForm.Visible = true;
         }
@@ -144,8 +148,11 @@ namespace View
                         Billboard closestBillboard = getClosest(e);
                         if (closestBillboard!=null)
                         {
-                            Rectangle rect = new Rectangle(closestBillboard.Coordinates.X - extendedRadius, closestBillboard.Coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
-                            g.FillEllipse(gradientBrush, rect);
+                            if (g != null)
+                            {
+                                Rectangle rect = new Rectangle(closestBillboard.Coordinates.X - extendedRadius, closestBillboard.Coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                                g.FillEllipse(gradientBrush, rect);
+                            }
                         }
                         frequency++;
                         if ((frequency % 10) == 0)
@@ -185,12 +192,15 @@ namespace View
                     adminCtrlForm.AddBillboardFlag = false;
                     adminCtrlForm.getAddBillBoardButton().Enabled = true;
                     //Point хранит координаты центра билборда
-                    billboardsList.Add(new Billboard(new Point(bbX+bbRadius, bbY+ bbRadius)));
+                    billboardsList.Add(new Billboard(new Point(bbX+bbRadius, bbY+ bbRadius), adminCtrlForm.SelectedUserName));
+
                     Cursor = Cursors.Default;
                 }
             }
             if (closestBillboard != null)
             {
+                adTable = new AdvertisementsTable();
+                adTable.Show();
                 //вывести таблицу DataGridView: id видео, название видео, очередность, размер, текущее состояние(воспроизводится, будет воспроизведено, ожидает файла)
             }
         }
@@ -199,10 +209,23 @@ namespace View
         {
             mapImage = Image.FromFile(slnPath + "\\Resources\\Minsk.png");
             g.DrawImage(mapImage, 0, 0, this.Width, this.Height);
-            foreach(Billboard billboard in billboardsList)
+            if (userFlag)
             {
-                Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
-                g.FillEllipse(brush, rect);
+                foreach (Billboard billboard in billboardsList)
+                {
+                    Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
+                    g.FillEllipse(brush, rect);
+                }
+            }
+            else
+            {
+                foreach (Billboard billboard in billboardsList)
+                {
+                    if (billboard.Owner==userName) {
+                        Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
+                        g.FillEllipse(brush, rect);
+                    }
+                }
             }
         }
 
@@ -229,11 +252,11 @@ namespace View
                         if ((billboard.Coordinates.Y - bbRadius > rectStartPoint.Y) && (billboard.Coordinates.Y - bbRadius < rectEndPoint.Y)) {
                             emptyFlag = false;
                             billboardsToDelete.Add(counter);
-                            counter++;
                             Rectangle rect = new Rectangle(billboard.Coordinates.X - extendedRadius, billboard.Coordinates.Y-extendedRadius, extendedRadius * 2, extendedRadius * 2);
                             g.FillEllipse(gradientBrush, rect);
                         }
                     }
+                    counter++;
                 }
                 if (!emptyFlag)
                 {
@@ -272,6 +295,42 @@ namespace View
             if (closestBillboard != null)
             {
                 //проиграть видео
+                adTable.Close();
+                adPlayer = new adVideoPlayer(slnPath);
+                adPlayer.Show();
+            }
+        }
+        public void getUserName(string userName)
+        {
+            this.userName = userName;
+            userCtrlForm.UserName=this.userName;
+        }
+        private void saveBillboardsPosition()
+        {
+            string path = slnPath + "\\Resources\\aboba.txt";
+            System.IO.File.WriteAllBytes(path, new byte[0]);
+            foreach (Billboard billboard in billboardsList)
+            {
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    sw.WriteLine(billboard.Owner + " " + billboard.Coordinates.X + " " + billboard.Coordinates.Y);
+                }
+            }
+        }
+        private void loadBillboardsPosition()
+        {
+            string path = slnPath + "\\Resources\\aboba.txt";
+            using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
+            {
+                string[] temp;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    temp = line.Split(' ');
+                    if (userFlag||temp[0].Equals(userName)) {
+                        billboardsList.Add(new Billboard(new Point(Int32.Parse(temp[1]), Int32.Parse(temp[2])), temp[0]));
+                    }
+                }
             }
         }
     }

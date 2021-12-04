@@ -30,13 +30,13 @@ namespace View
         private void InitializeComponent()
         {
             this.nickLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nickLabel
             // 
-            this.nickLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.nickLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nickLabel.AutoSize = true;
             this.nickLabel.Location = new System.Drawing.Point(122, 41);
@@ -46,19 +46,19 @@ namespace View
             this.nickLabel.Text = "Enter Nickname";
             this.nickLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(125, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.userNameTextBox.Location = new System.Drawing.Point(125, 94);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.userNameTextBox.TabIndex = 1;
             // 
             // loginButton
             // 
-            this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginButton.Location = new System.Drawing.Point(135, 147);
             this.loginButton.Name = "loginButton";
@@ -74,11 +74,12 @@ namespace View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 224);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.nickLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,7 +88,7 @@ namespace View
         #endregion
 
         private System.Windows.Forms.Label nickLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.Button loginButton;
     }
 }

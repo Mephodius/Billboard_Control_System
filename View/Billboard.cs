@@ -29,10 +29,23 @@ namespace View
         private string status;
         private DataFrame timeTable;
         private string owner;
+        private int group;
+        public string Owner
+        {
+            get
+            {
+                return owner;
+            }
+            set
+            {
+                owner = value;
+            }
+        }
         ArrayList adverstisementsPaths;
-        public Billboard(Point coord)
+        public Billboard(Point coord, string ownerName)
         {
             this.coordinates = coord;
+            this.owner = ownerName;
         }
     }
 }
