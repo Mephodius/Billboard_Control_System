@@ -17,13 +17,13 @@ namespace View
     {
         bool userFlag;
         private Graphics g;
-        Image img;
+        Image mapImage;
         StartForm prevForm;
         UserControlForm userCtrlForm;
         AdminControlForm adminCtrlForm;
         string slnPath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "");
-        Pen myPen = new Pen(System.Drawing.Color.Black, 4);
-        Brush brush = new SolidBrush(Color.Red);
+        Pen selectionPen = new Pen(System.Drawing.Color.Black, 4);
+        Brush brush = new SolidBrush(Color.Orange);
         //классная, но бесполезная штука
         Brush gradientBrush = new LinearGradientBrush(new Point(0, 0), new Point(1000, 1000), Color.Purple, Color.Blue);
         int bbRadius=10;
@@ -110,19 +110,17 @@ namespace View
 
         private void MapBillboardForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if (userFlag) {
+            /*if (userFlag) {
                 if (adminCtrlForm.AddBillboardFlag)
                 {
-                    /*
                     frequency++;
                     Rectangle rect = new Rectangle(PointToClient(Cursor.Position).X - bbPointRadius, PointToClient(Cursor.Position).Y - bbPointRadius, bbPointRadius*2, bbPointRadius * 2);
                     g.FillEllipse(brush, rect);
                     if ((frequency%3)==0) {
                         RepaintMap();
                     }
-                    */
                 }
-            }
+            }*/
             if (!userFlag||!adminCtrlForm.AddBillboardFlag)
             {
                 if (rectStartFlag && e.Button == MouseButtons.Left) {
@@ -138,6 +136,22 @@ namespace View
                     if ((frequency % 5) == 0)
                     {
                         this.Invalidate();
+                    }
+                }
+                else
+                {
+                    if (!userFlag||!adminCtrlForm.getDeleteBillBoardButton().Enabled) {
+                        Billboard closestBillboard = getClosest(e);
+                        if (closestBillboard!=null)
+                        {
+                            Rectangle rect = new Rectangle(closestBillboard.Coordinates.X - extendedRadius, closestBillboard.Coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                            g.FillEllipse(gradientBrush, rect);
+                        }
+                        frequency++;
+                        if ((frequency % 10) == 0)
+                        {
+                            this.Invalidate();
+                        }
                     }
                 }
             }
@@ -159,6 +173,7 @@ namespace View
 
         private void MapBillboardForm_MouseClick(object sender, MouseEventArgs e)
         {
+            Billboard closestBillboard = getClosest(e);
             if (userFlag)
             {
                 if (adminCtrlForm.AddBillboardFlag)
@@ -169,19 +184,24 @@ namespace View
                     g.FillEllipse(brush, rect);
                     adminCtrlForm.AddBillboardFlag = false;
                     adminCtrlForm.getAddBillBoardButton().Enabled = true;
-                    billboardsList.Add(new Billboard(new Point(bbX, bbY)));
+                    //Point хранит координаты центра билборда
+                    billboardsList.Add(new Billboard(new Point(bbX+bbRadius, bbY+ bbRadius)));
                     Cursor = Cursors.Default;
                 }
+            }
+            if (closestBillboard != null)
+            {
+                //вывести таблицу DataGridView: id видео, название видео, очередность, размер, текущее состояние(воспроизводится, будет воспроизведено, ожидает файла)
             }
         }
 
         public void RepaintMap()
         {
-            img = Image.FromFile(slnPath + "\\Resources\\Minsk.png");
-            g.DrawImage(img, 0, 0, this.Width, this.Height);
+            mapImage = Image.FromFile(slnPath + "\\Resources\\Minsk.png");
+            g.DrawImage(mapImage, 0, 0, this.Width, this.Height);
             foreach(Billboard billboard in billboardsList)
             {
-                Rectangle rect = new Rectangle(billboard.Coordinates.X, billboard.Coordinates.Y, bbRadius * 2, bbRadius * 2);
+                Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
                 g.FillEllipse(brush, rect);
             }
         }
@@ -205,12 +225,12 @@ namespace View
                 rectStartFlag = false;
                 foreach (Billboard billboard in billboardsList)
                 {
-                    if ((billboard.Coordinates.X>rectStartPoint.X) && (billboard.Coordinates.X < rectEndPoint.X)) {
-                        if ((billboard.Coordinates.Y > rectStartPoint.Y) && (billboard.Coordinates.Y < rectEndPoint.Y)) {
+                    if ((billboard.Coordinates.X - bbRadius > rectStartPoint.X) && (billboard.Coordinates.X - bbRadius < rectEndPoint.X)) {
+                        if ((billboard.Coordinates.Y - bbRadius > rectStartPoint.Y) && (billboard.Coordinates.Y - bbRadius < rectEndPoint.Y)) {
                             emptyFlag = false;
                             billboardsToDelete.Add(counter);
                             counter++;
-                            Rectangle rect = new Rectangle(billboard.Coordinates.X + bbRadius - extendedRadius, billboard.Coordinates.Y + bbRadius-extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                            Rectangle rect = new Rectangle(billboard.Coordinates.X - extendedRadius, billboard.Coordinates.Y-extendedRadius, extendedRadius * 2, extendedRadius * 2);
                             g.FillEllipse(gradientBrush, rect);
                         }
                     }
@@ -228,6 +248,31 @@ namespace View
         public ArrayList getBillBoardsToDelete()
         {
             return this.billboardsToDelete;
+        }
+        private Billboard getClosest(MouseEventArgs e)
+        {
+            double hypot = 0;
+            double besthypot = 100;
+            Billboard closestBillboard = null;
+            foreach (Billboard billboard in billboardsList)
+            {
+                hypot = Math.Sqrt(Math.Pow(billboard.Coordinates.X - e.Location.X, 2) + Math.Pow(billboard.Coordinates.Y - e.Location.Y, 2));
+                if ((hypot < extendedRadius * 2) && (hypot < besthypot))
+                {
+                    closestBillboard = billboard;
+                    besthypot = hypot;
+                }
+            }
+            return closestBillboard;
+        }
+
+        private void MapBillboardForm_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Billboard closestBillboard = getClosest(e);
+            if (closestBillboard != null)
+            {
+                //проиграть видео
+            }
         }
     }
 }

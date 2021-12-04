@@ -16,6 +16,7 @@ namespace View
         MapBillboardForm previousForm;
         UsersInfoView usersInfoView;
         private bool addBillboardFlag;
+        string selectedUserName;
         public bool AddBillboardFlag
         {
             get
@@ -84,6 +85,15 @@ namespace View
         public Control getDeleteBillBoardButton()
         {
             return this.deleteBillboardButton;
+        }
+
+        private void showLogsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void setUserName(string userName)
+        {
+            selectedUserName = userName;
         }
     }
 }

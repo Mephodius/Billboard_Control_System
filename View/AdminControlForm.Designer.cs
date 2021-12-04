@@ -87,6 +87,7 @@ namespace View
             this.showLogsButton.TabIndex = 8;
             this.showLogsButton.Text = "Show Logs";
             this.showLogsButton.UseVisualStyleBackColor = true;
+            this.showLogsButton.Click += new System.EventHandler(this.showLogsButton_Click);
             // 
             // showStatusBarButton
             // 

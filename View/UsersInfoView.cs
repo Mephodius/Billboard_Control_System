@@ -31,7 +31,7 @@ namespace View
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
+            saveUserInfo();
         }
 
         private void UsersInfoView_FormClosing(object sender, FormClosingEventArgs e)
@@ -55,6 +55,20 @@ namespace View
         {
             DataGridViewRow row = (DataGridViewRow)userDataGridView.Rows[0].Clone();
             userDataGridView.Rows.Add(row);
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+
+            if (userDataGridView.CurrentCell.ColumnIndex==0 && userDataGridView.Rows[userDataGridView.CurrentCell.RowIndex].Cells[0].Value!=null) {
+                prevForm.setUserName(userDataGridView.Rows[userDataGridView.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                saveUserInfo();
+                this.Hide();
+            }
+        }
+        private void saveUserInfo()
+        {
+
         }
     }
 }

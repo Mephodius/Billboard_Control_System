@@ -36,6 +36,7 @@ namespace View
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +82,9 @@ namespace View
             this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteButton.Location = new System.Drawing.Point(327, 398);
+            this.deleteButton.Location = new System.Drawing.Point(224, 398);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(179, 40);
+            this.deleteButton.Size = new System.Drawing.Size(138, 40);
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -94,9 +95,9 @@ namespace View
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButton.Location = new System.Drawing.Point(585, 398);
+            this.saveButton.Location = new System.Drawing.Point(618, 398);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(179, 40);
+            this.saveButton.Size = new System.Drawing.Size(138, 40);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -107,19 +108,33 @@ namespace View
             this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addButton.Location = new System.Drawing.Point(43, 398);
+            this.addButton.Location = new System.Drawing.Point(26, 398);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(179, 40);
+            this.addButton.Size = new System.Drawing.Size(138, 40);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // selectButton
+            // 
+            this.selectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectButton.Location = new System.Drawing.Point(422, 398);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(138, 40);
+            this.selectButton.TabIndex = 5;
+            this.selectButton.Text = "Select";
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // UsersInfoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.selectButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
@@ -144,5 +159,6 @@ namespace View
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button selectButton;
     }
 }

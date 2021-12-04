@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -21,8 +22,14 @@ namespace View
                 coordinates = value;
             }
         }
-        private string Status;
+        /*avaiable - green
+          waiting_for_data - orange
+          stopped_working - red
+        */
+        private string status;
         private DataFrame timeTable;
+        private string owner;
+        ArrayList adverstisementsPaths;
         public Billboard(Point coord)
         {
             this.coordinates = coord;

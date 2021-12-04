@@ -54,6 +54,7 @@ namespace View
             this.Load += new System.EventHandler(this.UserBillboard_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserBillboard_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MapBillboardForm_MouseClick);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MapBillboardForm_MouseDoubleClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MapBillboardForm_MouseDown);
             this.MouseHover += new System.EventHandler(this.MapBillboardForm_MouseHover);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MapBillboardForm_MouseMove);
