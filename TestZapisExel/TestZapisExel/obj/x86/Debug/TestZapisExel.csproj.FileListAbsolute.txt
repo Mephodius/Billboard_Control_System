@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\TestZapisExel.exe.config
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\TestZapisExel.exe
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\TestZapisExel.pdb
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.DataSet.dll
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.dll
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.pdb
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.xml
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\bin\x86\Debug\ExcelDataReader.DataSet.xml
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.csprojAssemblyReference.cache
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.Form1.resources
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.Properties.Resources.resources
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.csproj.GenerateResource.cache
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.csproj.CopyComplete
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.exe
+C:\Users\User\source\repos\TestZapisExel\TestZapisExel\obj\x86\Debug\TestZapisExel.pdb

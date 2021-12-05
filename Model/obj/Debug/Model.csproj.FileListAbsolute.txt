@@ -1,9 +1,0 @@
-D:\PROJECT_TP\Billboard_Control_System\Model\bin\Debug\Model.exe.config
-D:\PROJECT_TP\Billboard_Control_System\Model\bin\Debug\Model.exe
-D:\PROJECT_TP\Billboard_Control_System\Model\bin\Debug\Model.pdb
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.csproj.AssemblyReference.cache
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.Properties.Resources.resources
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.csproj.GenerateResource.cache
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.exe
-D:\PROJECT_TP\Billboard_Control_System\Model\obj\Debug\Model.pdb
