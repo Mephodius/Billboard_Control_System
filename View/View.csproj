@@ -207,86 +207,86 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminControlForm.cs">
+    <Compile Include="AdminControlView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminControlForm.Designer.cs">
-      <DependentUpon>AdminControlForm.cs</DependentUpon>
+    <Compile Include="AdminControlView.Designer.cs">
+      <DependentUpon>AdminControlView.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdvertisementsTable.cs">
+    <Compile Include="DeviceSheduleView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdvertisementsTable.Designer.cs">
-      <DependentUpon>AdvertisementsTable.cs</DependentUpon>
+    <Compile Include="DeviceSheduleView.Designer.cs">
+      <DependentUpon>DeviceSheduleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="adVideoPlayer.cs">
+    <Compile Include="AdVideoPlayerView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adVideoPlayer.Designer.cs">
-      <DependentUpon>adVideoPlayer.cs</DependentUpon>
+    <Compile Include="AdVideoPlayerView.Designer.cs">
+      <DependentUpon>AdVideoPlayerView.cs</DependentUpon>
     </Compile>
     <Compile Include="Billboard.cs" />
-    <Compile Include="CreateScheduleForm.cs">
+    <Compile Include="ScheduleUpdateView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateScheduleForm.Designer.cs">
-      <DependentUpon>CreateScheduleForm.cs</DependentUpon>
+    <Compile Include="ScheduleUpdateView.Designer.cs">
+      <DependentUpon>ScheduleUpdateView.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UserLoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="UserLoginView.Designer.cs">
+      <DependentUpon>UserLoginView.cs</DependentUpon>
     </Compile>
-    <Compile Include="MapBillboardForm.cs">
+    <Compile Include="MapView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MapBillboardForm.Designer.cs">
-      <DependentUpon>MapBillboardForm.cs</DependentUpon>
+    <Compile Include="MapView.Designer.cs">
+      <DependentUpon>MapView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowInfoForm.cs">
+    <Compile Include="BillboardDataView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowInfoForm.Designer.cs">
-      <DependentUpon>ShowInfoForm.cs</DependentUpon>
+    <Compile Include="BillboardDataView.Designer.cs">
+      <DependentUpon>BillboardDataView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm.cs">
+    <Compile Include="StartView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <Compile Include="StartView.Designer.cs">
+      <DependentUpon>StartView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlForm.cs">
+    <Compile Include="UserControlView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControlForm.Designer.cs">
-      <DependentUpon>UserControlForm.cs</DependentUpon>
+    <Compile Include="UserControlView.Designer.cs">
+      <DependentUpon>UserControlView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersInfoView.cs">
+    <Compile Include="UserDataView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersInfoView.Designer.cs">
-      <DependentUpon>UsersInfoView.cs</DependentUpon>
+    <Compile Include="UserDataView.Designer.cs">
+      <DependentUpon>UserDataView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminControlForm.resx">
-      <DependentUpon>AdminControlForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminControlView.resx">
+      <DependentUpon>AdminControlView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdvertisementsTable.resx">
-      <DependentUpon>AdvertisementsTable.cs</DependentUpon>
+    <EmbeddedResource Include="DeviceSheduleView.resx">
+      <DependentUpon>DeviceSheduleView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adVideoPlayer.resx">
-      <DependentUpon>adVideoPlayer.cs</DependentUpon>
+    <EmbeddedResource Include="AdVideoPlayerView.resx">
+      <DependentUpon>AdVideoPlayerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateScheduleForm.resx">
-      <DependentUpon>CreateScheduleForm.cs</DependentUpon>
+    <EmbeddedResource Include="ScheduleUpdateView.resx">
+      <DependentUpon>ScheduleUpdateView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserLoginView.resx">
+      <DependentUpon>UserLoginView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MapBillboardForm.resx">
-      <DependentUpon>MapBillboardForm.cs</DependentUpon>
+    <EmbeddedResource Include="MapView.resx">
+      <DependentUpon>MapView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -298,17 +298,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ShowInfoForm.resx">
-      <DependentUpon>ShowInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="BillboardDataView.resx">
+      <DependentUpon>BillboardDataView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="StartView.resx">
+      <DependentUpon>StartView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlForm.resx">
-      <DependentUpon>UserControlForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlView.resx">
+      <DependentUpon>UserControlView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersInfoView.resx">
-      <DependentUpon>UsersInfoView.cs</DependentUpon>
+    <EmbeddedResource Include="UserDataView.resx">
+      <DependentUpon>UserDataView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -348,6 +348,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presenter\Presenter.csproj">
+      <Project>{78660add-4327-4066-93bf-29e4b703b831}</Project>
+      <Name>Presenter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,7 +14,7 @@ namespace Billboards
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            StartForm startForm = new StartForm();
+            StartView startForm = new StartView();
             Application.Run(startForm);
         }
     }

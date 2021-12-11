@@ -7,3 +7,12 @@ D:\PROJECT_TP\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.Gene
 D:\PROJECT_TP\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
 D:\PROJECT_TP\Billboard_Control_System\Presenter\obj\Debug\Presenter.exe
 D:\PROJECT_TP\Billboard_Control_System\Presenter\obj\Debug\Presenter.pdb
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Presenter.exe.config
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Presenter.exe
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Presenter.pdb
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.Properties.Resources.resources
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.GenerateResource.cache
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.exe
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.pdb
