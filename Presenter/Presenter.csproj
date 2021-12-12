@@ -55,6 +55,7 @@
     <Compile Include="IDeviceSheduleView.cs" />
     <Compile Include="IMapView.cs" />
     <Compile Include="ISheduleUpdateView.cs" />
+    <Compile Include="ISystem.cs" />
     <Compile Include="IUserLoginView.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Presenters\DSVPresenter.cs" />
@@ -84,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{e2a64387-7be3-4ef5-b5aa-da15b0182321}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,18 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
+using Presenter.Presenters;
 
 namespace View
 {
     public partial class DeviceSheduleView : Form, IDeviceSheduleView
     {
         ArrayList advertisments;
+        DSVPresenter dsvpresenter;
         public DeviceSheduleView()
         {
+            dsvpresenter = new DSVPresenter(this);
             InitializeComponent();
         }
-
-        private void SheduleTable_Load(object sender, EventArgs e)
+        
+        public void SheduleTable_Load(object sender, EventArgs e)
         {
 
         }

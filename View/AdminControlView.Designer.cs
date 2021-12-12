@@ -116,8 +116,9 @@ namespace View
             this.deleteBillboardButton.UseVisualStyleBackColor = true;
             this.deleteBillboardButton.Click += new System.EventHandler(this.deleteBillboardButton_Click);
             // 
-            // AdminControlForm
+            // AdminControlView
             // 
+            this.AcceptButton = this.showUsersButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 753);
@@ -128,7 +129,7 @@ namespace View
             this.Controls.Add(this.addBillboardButton);
             this.Controls.Add(this.exitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AdminControlForm";
+            this.Name = "AdminControlView";
             this.Text = "AdminControlForm";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminControlForm_FormClosing);

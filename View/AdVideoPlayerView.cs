@@ -16,8 +16,6 @@ namespace View
     {
         private Video video;
         private string[] videoPaths;
-        private string folderPath = @"C:\Users\alyos\Videos\GenshinImpact\";
-        private string fileName = @"C:\Users\alyos\Downloads\Mountain.mp4";
         private string slnPath;
         private int selectedIndex = 0;
         private Size formSize;

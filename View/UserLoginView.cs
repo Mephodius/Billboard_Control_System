@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
+using Presenter.Presenters;
 
 namespace View
 {
@@ -17,6 +18,7 @@ namespace View
         private StartView prevForm;
         private MapView mapBillboardForm;
         private string userNamesFilePath = System.IO.Path.Combine(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "") + "\\Resources\\usernames.txt";
+        private UserLoginPresenter ulpresenter;
         public UserLoginView(StartView previousForm)
         {
             InitializeComponent();

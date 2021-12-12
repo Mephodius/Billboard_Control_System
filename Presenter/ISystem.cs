@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Presenter
 {
-    public interface IDeviceSheduleView
+    public interface ISystem
     {
-        void SheduleTable_Load(object sender, EventArgs e);
+
     }
 }

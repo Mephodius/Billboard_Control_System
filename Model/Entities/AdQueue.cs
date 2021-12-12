@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    class AdQueue
+    public class AdQueue
     {
         ArrayList advertisments = new ArrayList();
         public AdQueue()

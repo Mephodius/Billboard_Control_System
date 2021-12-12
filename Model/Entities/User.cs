@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    class User
+    public class User
     {
         private string nickName;
         public ArrayList billboards = new ArrayList();

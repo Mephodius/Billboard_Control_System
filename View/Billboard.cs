@@ -27,7 +27,7 @@ namespace View
           stopped_working - red
         */
         private string status;
-        private DataFrame timeTable;
+        //private DataFrame timeTable;
         private string owner;
         private int group;
         public string Owner

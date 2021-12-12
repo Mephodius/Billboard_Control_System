@@ -10,7 +10,7 @@ using Model.Entities;
 namespace Model
 {
     // класс - одиночка
-    class Server
+    public class Server
     {
         private static Server server;
 
@@ -34,7 +34,7 @@ namespace Model
         {
             return new ArrayList();
         }
-        public ArrayList getBillboards(User user)
+        public ArrayList getBillboardList(User user)
         {
             if (user == null)
             {

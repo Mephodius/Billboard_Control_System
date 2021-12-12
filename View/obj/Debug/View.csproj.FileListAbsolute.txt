@@ -101,3 +101,6 @@ D:\Programming technology\Billboard_Control_System\View\obj\Debug\View.pdb
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Presenter.exe
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Presenter.pdb
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Presenter.exe.config
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.exe
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.pdb
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.exe.config

@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
+using Presenter.Presenters;
 
 namespace View
 {
     public partial class ScheduleUpdateView : Form, ISheduleUpdateView
     {
+        SUVPresenter suvpresenter;
         public ScheduleUpdateView()
         {
+            suvpresenter = new SUVPresenter(this);
             InitializeComponent();
         }
 

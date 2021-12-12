@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
+using Presenter.Presenters;
 
 namespace View
 {
@@ -40,8 +41,11 @@ namespace View
         private bool rectStartFlag = false;
         private bool locked_selection = false;
         private string userName;
+
+        MapPresenter mappresenter;
         public MapView(StartView previousForm, bool userFlg)
         {
+            mappresenter = new MapPresenter(this);
             InitializeComponent();
             this.userFlag = userFlg;
             showOptionsButton.Visible = false;

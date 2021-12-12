@@ -16,3 +16,7 @@ D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter
 D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
 D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.exe
 D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.pdb
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.exe
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.pdb
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.exe.config
+D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CopyComplete

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    class Billboard
+    public class Billboard
     {
         private Point coordinates;//top left coordinate
         public Point Coordinates
