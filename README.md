@@ -1,5 +1,4 @@
 # Billboard_Control_System
-Abstract system for controlling billboards, labwork for TP
 Рекламные билборды
 
 Нашей команде разработчиков было дано два месяца на разработку, этих двух недель оказалось маловато т.к. за два дня написать годный проект очень сложно. 
