@@ -104,3 +104,83 @@ D:\Programming technology\Billboard_Control_System\View\bin\Debug\Presenter.exe.
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.exe
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.pdb
 D:\Programming technology\Billboard_Control_System\View\bin\Debug\Model.exe.config
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\BillbardsDB.mdf
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\BillbardsDB_log.ldf
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\UsersDB.mdf
+D:\Programming technology\Billboard_Control_System\View\bin\Debug\UsersDB_log.ldf
+D:\PT\Billboard_Control_System\View\obj\Debug\Interop.WMPLib.dll
+D:\PT\Billboard_Control_System\View\obj\Debug\AxInterop.WMPLib.dll
+D:\PT\Billboard_Control_System\View\obj\Debug\View.csproj.ResolveComReference.cache
+D:\PT\Billboard_Control_System\View\obj\Debug\View.AdminControlView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.DeviceSheduleView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.AdVideoPlayerView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.ScheduleUpdateView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.UserLoginView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.MapView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.Properties.Resources.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.BillboardDataView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.StartView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.UserControlView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.UserDataView.resources
+D:\PT\Billboard_Control_System\View\obj\Debug\View.csproj.GenerateResource.cache
+D:\PT\Billboard_Control_System\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.csproj.AssemblyReference.cache
+D:\PT1\Billboard_Control_System\View\obj\Debug\Interop.WMPLib.dll
+D:\PT1\Billboard_Control_System\View\obj\Debug\AxInterop.WMPLib.dll
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.csproj.ResolveComReference.cache
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.AdminControlView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.DeviceSheduleView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.AdVideoPlayerView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.ScheduleUpdateView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.UserLoginView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.MapView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.Properties.Resources.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.BillboardDataView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.StartView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.UserControlView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.UserDataView.resources
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.csproj.GenerateResource.cache
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\View\bin\Debug\BillbardsDB.mdf
+D:\PT1\Billboard_Control_System\View\bin\Debug\BillbardsDB_log.ldf
+D:\PT1\Billboard_Control_System\View\bin\Debug\UsersDB.mdf
+D:\PT1\Billboard_Control_System\View\bin\Debug\UsersDB_log.ldf
+D:\PT1\Billboard_Control_System\View\bin\Debug\View.exe.config
+D:\PT1\Billboard_Control_System\View\bin\Debug\View.exe
+D:\PT1\Billboard_Control_System\View\bin\Debug\View.pdb
+D:\PT1\Billboard_Control_System\View\bin\Debug\Apache.Arrow.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.Data.Analysis.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.ML.DataView.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Model.exe
+D:\PT1\Billboard_Control_System\View\bin\Debug\Presenter.exe
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Buffers.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Collections.Immutable.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Memory.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Numerics.Vectors.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.Direct3D.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\Model.pdb
+D:\PT1\Billboard_Control_System\View\bin\Debug\Model.exe.config
+D:\PT1\Billboard_Control_System\View\bin\Debug\Presenter.pdb
+D:\PT1\Billboard_Control_System\View\bin\Debug\Presenter.exe.config
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.Data.Analysis.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.ML.DataView.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Buffers.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Collections.Immutable.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Memory.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Numerics.Vectors.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.Direct3D.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\Microsoft.DirectX.xml
+D:\PT1\Billboard_Control_System\View\bin\Debug\Interop.WMPLib.dll
+D:\PT1\Billboard_Control_System\View\bin\Debug\AxInterop.WMPLib.dll
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.csproj.CopyComplete
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.exe
+D:\PT1\Billboard_Control_System\View\obj\Debug\View.pdb

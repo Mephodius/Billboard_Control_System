@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Model.Entities;
+using Presenter.Presenters;
 namespace View
 {
     public partial class AdminControlView : Form
@@ -89,9 +90,11 @@ namespace View
             ArrayList array = previousForm.getBillBoardsToDelete();
             array.Reverse();
             //for(int i = array.Count;i>=0;i--)
-            foreach(int index in array)
+            MapPresenter temp = previousForm.getPresenter();
+            foreach(Billboard billboard in array)
             {
-                previousForm.getBillboardList().RemoveAt(index);
+                previousForm.getBillboardList().Remove(billboard);
+                temp.deleteBillboard(billboard);
             }
             previousForm.RepaintMap();
             deleteBillboardButton.Enabled = false;

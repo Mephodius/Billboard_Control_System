@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presenter;
 using Presenter.Presenters;
+using Model.Entities;
 
 namespace View
 {
@@ -158,7 +159,7 @@ namespace View
                         {
                             if (g != null)
                             {
-                                Rectangle rect = new Rectangle(closestBillboard.Coordinates.X - extendedRadius, closestBillboard.Coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                                Rectangle rect = new Rectangle(closestBillboard.coordinates.X - extendedRadius, closestBillboard.coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
                                 g.FillEllipse(gradientBrush, rect);
                             }
                         }
@@ -194,9 +195,10 @@ namespace View
                     g.FillEllipse(brush, rect);
                     adminCtrlForm.AddBillboardFlag = false;
                     adminCtrlForm.getAddBillBoardButton().Enabled = true;
-                        //Point хранит координаты центра билборда
-                    billboardsList.Add(new Billboard(new Point(bbX + bbRadius, bbY + bbRadius), adminCtrlForm.SelectedUserName));
-
+                    //Point хранит координаты центра билборда
+                    Billboard temp = new Billboard(new Point(bbX + bbRadius, bbY + bbRadius), adminCtrlForm.SelectedUserName, 32);
+                    temp.id = mappresenter.addBillboard(temp);
+                    billboardsList.Add(temp);
                     Cursor = Cursors.Default;
                 }
             }
@@ -216,7 +218,7 @@ namespace View
             {
                 foreach (Billboard billboard in billboardsList)
                 {
-                    Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
+                    Rectangle rect = new Rectangle(billboard.coordinates.X - bbRadius, billboard.coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
                     g.FillEllipse(brush, rect);
                 }
             }
@@ -224,8 +226,8 @@ namespace View
             {
                 foreach (Billboard billboard in billboardsList)
                 {
-                    if (billboard.Owner==userName) {
-                        Rectangle rect = new Rectangle(billboard.Coordinates.X - bbRadius, billboard.Coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
+                    if (billboard.owner==userName) {
+                        Rectangle rect = new Rectangle(billboard.coordinates.X - bbRadius, billboard.coordinates.Y - bbRadius, bbRadius * 2, bbRadius * 2);
                         g.FillEllipse(brush, rect);
                     }
                 }
@@ -254,13 +256,13 @@ namespace View
                 rectStartFlag = false;
                 foreach (Billboard billboard in billboardsList)
                 {
-                    if ((billboard.Coordinates.X - bbRadius > rectStartPoint.X) && (billboard.Coordinates.X - bbRadius < rectEndPoint.X)) {
-                        if ((billboard.Coordinates.Y - bbRadius > rectStartPoint.Y) && (billboard.Coordinates.Y - bbRadius < rectEndPoint.Y)) {
-                            if (userFlag || billboard.Owner == userName)
+                    if ((billboard.coordinates.X - bbRadius > rectStartPoint.X) && (billboard.coordinates.X - bbRadius < rectEndPoint.X)) {
+                        if ((billboard.coordinates.Y - bbRadius > rectStartPoint.Y) && (billboard.coordinates.Y - bbRadius < rectEndPoint.Y)) {
+                            if (userFlag || billboard.owner == userName)
                             {
                                 emptyFlag = false;
-                                billboardsToDelete.Add(counter);
-                                Rectangle rect = new Rectangle(billboard.Coordinates.X - extendedRadius, billboard.Coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
+                                billboardsToDelete.Add(billboard);
+                                Rectangle rect = new Rectangle(billboard.coordinates.X - extendedRadius, billboard.coordinates.Y - extendedRadius, extendedRadius * 2, extendedRadius * 2);
                                 g.FillEllipse(gradientBrush, rect);
                             }
                         }
@@ -299,7 +301,7 @@ namespace View
             Billboard closestBillboard = null;
             foreach (Billboard billboard in billboardsList)
             {
-                hypot = Math.Sqrt(Math.Pow(billboard.Coordinates.X - e.Location.X, 2) + Math.Pow(billboard.Coordinates.Y - e.Location.Y, 2));
+                hypot = Math.Sqrt(Math.Pow(billboard.coordinates.X - e.Location.X, 2) + Math.Pow(billboard.coordinates.Y - e.Location.Y, 2));
                 if ((hypot < extendedRadius * 2) && (hypot < besthypot))
                 {
                     closestBillboard = billboard;
@@ -327,31 +329,49 @@ namespace View
         }
         private void saveBillboardsPosition()
         {
-            string path = slnPath + "\\Resources\\aboba.txt";
-            System.IO.File.WriteAllBytes(path, new byte[0]);
-            foreach (Billboard billboard in billboardsList)
-            {
-                using (StreamWriter sw = new StreamWriter(path, true))
-                {
-                    sw.WriteLine(billboard.Owner + " " + billboard.Coordinates.X + " " + billboard.Coordinates.Y);
-                }
-            }
+            //string path = slnPath + "\\Resources\\aboba.txt";
+            //System.IO.File.WriteAllBytes(path, new byte[0]);
+            //foreach (Billboard billboard in billboardsList)
+            //{
+            //    using (StreamWriter sw = new StreamWriter(path, true))
+            //    {
+            //        sw.WriteLine(billboard.owner + " " + billboard.coordinates.X + " " + billboard.coordinates.Y);
+            //    }
+            //}
+            //DataTable dt = new DataTable();
+            //foreach (Billboard billboard in billboardsList)
+            //{
+            //    dt.Rows.Add(billboard);
+            //    mappresenter.
+            //}
         }
         private void loadBillboardsPosition()
         {
             string path = slnPath + "\\Resources\\aboba.txt";
-            using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
+            ////using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
+            ////{
+            ////    string[] temp;
+            ////    string line;
+            ////    while ((line = sr.ReadLine()) != null)
+            ////    {
+            ////        temp = line.Split(' ');
+            ////        if (userFlag||temp[0].Equals(userName)) {
+            ////            Billboard tempbb = new Billboard(new Point(Int32.Parse(temp[1]), Int32.Parse(temp[2])), temp[0], 32);
+            ////            billboardsList.Add(tempbb);
+            ////            mappresenter.addBillboard(tempbb);
+            ////        }
+            ////    }
+            ////}
+            DataSet ds = mappresenter.getBillboards();
+            foreach (DataRow billboard in ds.Tables[0].Rows)
             {
-                string[] temp;
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    temp = line.Split(' ');
-                    if (userFlag||temp[0].Equals(userName)) {
-                        billboardsList.Add(new Billboard(new Point(Int32.Parse(temp[1]), Int32.Parse(temp[2])), temp[0]));
-                    }
-                }
+                Billboard tempbb = new Billboard(new Point(billboard.Field<int>("X"), billboard.Field<int>("Y")), billboard.Field<string>("owner"), 32);
+                billboardsList.Add(tempbb);
             }
+        }
+        public MapPresenter getPresenter()
+        {
+            return mappresenter;
         }
     }
 }

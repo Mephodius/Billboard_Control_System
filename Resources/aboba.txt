@@ -1,6 +1,8 @@
-Artem 554 282
-Artem 648 438
-Artem 713 350
-Kir 713 230
-Kir 843 448
-Kir 860 324
+Kir 448 319
+Kir 573 250
+Kir 790 208
+Kir 464 169
+Kir 456 435
+Kir 574 443
+Lexa 644 329
+Lexa 538 135

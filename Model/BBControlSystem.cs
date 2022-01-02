@@ -8,7 +8,7 @@ namespace Model
 {
     public class BBControlSystem
     {
-        public Server server;
+        private Server server;
         private static BBControlSystem system;
 
         private BBControlSystem()
@@ -21,6 +21,10 @@ namespace Model
             if (system == null)
                 system = new BBControlSystem();
             return system;
+        }
+        public Server getServer()
+        {
+            return server;
         }
     }
 }

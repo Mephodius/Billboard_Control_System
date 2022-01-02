@@ -16,3 +16,23 @@ D:\Programming technology\Billboard_Control_System\Model\obj\Debug\Model.csproj.
 D:\Programming technology\Billboard_Control_System\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Programming technology\Billboard_Control_System\Model\obj\Debug\Model.exe
 D:\Programming technology\Billboard_Control_System\Model\obj\Debug\Model.pdb
+D:\Programming technology\Billboard_Control_System\Model\bin\Debug\BillbardsDB.mdf
+D:\Programming technology\Billboard_Control_System\Model\bin\Debug\BillbardsDB_log.ldf
+D:\Programming technology\Billboard_Control_System\Model\bin\Debug\UsersDB.mdf
+D:\Programming technology\Billboard_Control_System\Model\bin\Debug\UsersDB_log.ldf
+D:\PT\Billboard_Control_System\Model\obj\Debug\Model.Properties.Resources.resources
+D:\PT\Billboard_Control_System\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\PT\Billboard_Control_System\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.Properties.Resources.resources
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\PT1\Billboard_Control_System\Model\bin\Debug\BillbardsDB.mdf
+D:\PT1\Billboard_Control_System\Model\bin\Debug\BillbardsDB_log.ldf
+D:\PT1\Billboard_Control_System\Model\bin\Debug\UsersDB.mdf
+D:\PT1\Billboard_Control_System\Model\bin\Debug\UsersDB_log.ldf
+D:\PT1\Billboard_Control_System\Model\bin\Debug\Model.exe.config
+D:\PT1\Billboard_Control_System\Model\bin\Debug\Model.exe
+D:\PT1\Billboard_Control_System\Model\bin\Debug\Model.pdb
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.exe
+D:\PT1\Billboard_Control_System\Model\obj\Debug\Model.pdb

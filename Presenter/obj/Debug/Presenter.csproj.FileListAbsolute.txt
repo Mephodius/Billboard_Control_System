@@ -20,3 +20,27 @@ D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.exe
 D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.pdb
 D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\Model.exe.config
 D:\Programming technology\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CopyComplete
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\BillbardsDB.mdf
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\BillbardsDB_log.ldf
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\UsersDB.mdf
+D:\Programming technology\Billboard_Control_System\Presenter\bin\Debug\UsersDB_log.ldf
+D:\PT\Billboard_Control_System\Presenter\obj\Debug\Presenter.Properties.Resources.resources
+D:\PT\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.GenerateResource.cache
+D:\PT\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.Properties.Resources.resources
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.GenerateResource.cache
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\BillbardsDB.mdf
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\BillbardsDB_log.ldf
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\UsersDB.mdf
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\UsersDB_log.ldf
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Presenter.exe.config
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Presenter.exe
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Presenter.pdb
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Model.exe
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Model.pdb
+D:\PT1\Billboard_Control_System\Presenter\bin\Debug\Model.exe.config
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.csproj.CopyComplete
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.exe
+D:\PT1\Billboard_Control_System\Presenter\obj\Debug\Presenter.pdb

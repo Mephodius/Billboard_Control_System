@@ -23,6 +23,7 @@ namespace View
         {
             InitializeComponent();
             prevForm = previousForm;
+            ulpresenter = new UserLoginPresenter(this);
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -31,17 +32,25 @@ namespace View
             {
                 string[] temp;
                 string line;
-                while ((line = sr.ReadLine()) != null)
+                //while ((line = sr.ReadLine()) != null)
+                //{
+                //    temp = line.Split(' ');
+                //    if (temp[0].Equals(userNameTextBox.Text))
+                //    {
+                //        mapBillboardForm = new MapView(prevForm, false);
+                //        mapBillboardForm.getUserName(userNameTextBox.Text);
+                //        mapBillboardForm.Show();
+                //        this.Visible = false;
+                //        return;
+                //    }
+                //}
+                if (ulpresenter.IsUser(userNameTextBox.Text))
                 {
-                    temp = line.Split(' ');
-                    if (temp[0].Equals(userNameTextBox.Text))
-                    {
-                        mapBillboardForm = new MapView(prevForm, false);
-                        mapBillboardForm.getUserName(userNameTextBox.Text);
-                        mapBillboardForm.Show();
-                        this.Visible = false;
-                        return;
-                    }
+                    mapBillboardForm = new MapView(prevForm, false);
+                    mapBillboardForm.getUserName(userNameTextBox.Text);
+                    mapBillboardForm.Show();
+                    this.Visible = false;
+                    return;
                 }
                 MessageBox.Show("Please, enter correct username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }

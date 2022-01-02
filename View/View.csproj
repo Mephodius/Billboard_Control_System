@@ -46,6 +46,7 @@
     <Reference Include="Microsoft.ML.DataView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ML.DataView.1.7.0\lib\netstandard2.0\Microsoft.ML.DataView.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
       <Private>True</Private>
@@ -225,7 +226,6 @@
     <Compile Include="AdVideoPlayerView.Designer.cs">
       <DependentUpon>AdVideoPlayerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Billboard.cs" />
     <Compile Include="ScheduleUpdateView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +350,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{e2a64387-7be3-4ef5-b5aa-da15b0182321}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Presenter\Presenter.csproj">
       <Project>{78660add-4327-4066-93bf-29e4b703b831}</Project>
       <Name>Presenter</Name>

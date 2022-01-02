@@ -56,11 +56,13 @@
     <Compile Include="IMapView.cs" />
     <Compile Include="ISheduleUpdateView.cs" />
     <Compile Include="ISystem.cs" />
+    <Compile Include="IUserDataView.cs" />
     <Compile Include="IUserLoginView.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Presenters\DSVPresenter.cs" />
     <Compile Include="Presenters\MapPresenter.cs" />
     <Compile Include="Presenters\SUVPresenter.cs" />
+    <Compile Include="Presenters\UserDataPresenter.cs" />
     <Compile Include="Presenters\UserLoginPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

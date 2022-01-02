@@ -44,3 +44,60 @@ D:\Programming technology\Billboard_Control_System\Billboards\obj\Debug\BBCProgr
 D:\Programming technology\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.CopyComplete
 D:\Programming technology\Billboard_Control_System\Billboards\obj\Debug\Billboards.exe
 D:\Programming technology\Billboard_Control_System\Billboards\obj\Debug\Billboards.pdb
+D:\Programming technology\Billboard_Control_System\Billboards\bin\Debug\BillbardsDB.mdf
+D:\Programming technology\Billboard_Control_System\Billboards\bin\Debug\BillbardsDB_log.ldf
+D:\Programming technology\Billboard_Control_System\Billboards\bin\Debug\UsersDB.mdf
+D:\Programming technology\Billboard_Control_System\Billboards\bin\Debug\UsersDB_log.ldf
+D:\PT\Billboard_Control_System\Billboards\obj\Debug\Billboards.Properties.Resources.resources
+D:\PT\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.GenerateResource.cache
+D:\PT\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\Billboards.Properties.Resources.resources
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.GenerateResource.cache
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.CoreCompileInputs.cache
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\BillbardsDB.mdf
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\BillbardsDB_log.ldf
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\UsersDB.mdf
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\UsersDB_log.ldf
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Billboards.exe.config
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Billboards.exe
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Billboards.pdb
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Apache.Arrow.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.Data.Analysis.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.ML.DataView.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Model.exe
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Presenter.exe
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Buffers.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Collections.Immutable.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Memory.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Numerics.Vectors.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\View.exe
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\AxInterop.WMPLib.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Interop.WMPLib.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.Direct3D.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.dll
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Model.pdb
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Model.exe.config
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Presenter.pdb
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Presenter.exe.config
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\View.pdb
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\View.exe.config
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.Data.Analysis.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.ML.DataView.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Buffers.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Collections.Immutable.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Memory.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Numerics.Vectors.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.Direct3D.xml
+D:\PT1\Billboard_Control_System\Billboards\bin\Debug\Microsoft.DirectX.xml
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.AssemblyReference.cache
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\BBCProgram.csproj.CopyComplete
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\Billboards.exe
+D:\PT1\Billboard_Control_System\Billboards\obj\Debug\Billboards.pdb
